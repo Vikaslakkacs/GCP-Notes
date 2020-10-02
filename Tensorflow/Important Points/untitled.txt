@@ -1,0 +1,3 @@
+While calculating the error for a model to pass it to gradient descent.
+    Classic method is we will loop the zip(x_data,y_data) then for every value we will calculate the error and we will increment it. 
+    Modren method: We  can use tf.reduced_mean(y-y_cal) so that it will automatically take the mean of those values and reduce it to one value.

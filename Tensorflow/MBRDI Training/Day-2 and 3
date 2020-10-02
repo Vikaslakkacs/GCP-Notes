@@ -1,0 +1,84 @@
+Decision Tree algorithm:
+    It is like the Bull eye game: You ask certain fixed number of questions and the other person will answer in yes or no manner. By guessing the answers the person who is asking questionss should guess the name of the person/object etc.,
+    Similarly decision trees will create a map kind of thing by looking the data ans asking questions and based on the answers and data it will take decision. By the data it will reduce the error percentage.
+    Eg: Data for persons
+        Marks         Pass/Fail      Error chance
+        90                Pass         90
+        20                Fail         70
+        56                Pass         36
+     Here above first the model think that anything below 90 is fail Here the error chance is 90. Later after 2nd row it will think that fail would be  between 21 and 90, here the error chance reduced to 70. After 3rd row the fail would be between 20 and 56 and here the error chance reduced to 36%. So by data the model is taking decisions, So this is known as Decision tree.
+In Decision tree we have a measurement known as 'gini' index: Which based on this index only the model will take decision, and the main aim of the model is to reduce the gini index as less as possible. as gini index =0 then the output of decision tree is accurate.
+Pros: It is superfast
+Cons: Overfitting: It may perform well on train data but it will fail for testing data.
+K Nearest Neighbors: But in the same example if data like 55 comes then in decision tree it will either consider it as pass or fail. But as 55 is near to 56 then a model will consider it as pass. That is known as K nearest neighbors.It will predict based on the neighbor values.
+
+SVM (Support Vector machines):Support vector machines an advanced version of regression concept(both linear and logistic): But it has another two lines on both sides on the line (Which is a vector: A line in the regression is a vector which denotes the set of values which are scalars). So the two vectors are supporting the main vector line, hence the name support vector machines. This support of vectors will increase the accuracy of the model. But the main drawback is its is too slow to process thedata.
+
+
+Data Preprocessing tips:
+
+n-fold split: During a train test split of the data lets say the class divided 70% to train and 30% to test. This is a single fold data.
+    2-fold split: It will take the first 35% of the data for train next 30 for test and next 35% for training on first train. and for the second train it will take the first 70% of train and last 30% of test.
+    3-fold split: it will take 3 rounds in which splits the data acordingly thre times, which gives little more data for processing.
+
+Random_states: Random state will fix the random values as per the number from this you can see the performance of the model with the same random data, otherwise we won't know whether it is because of the shuffling of the data or model changes.
+Multi processing and multi threading: n_jobs parameter in every model where we can specify the job count to create parallel processing.
+
+Recall: If there are 1000 ppl , out of which 100 has virus. Recall is like during prediction, how many ppl did the model selected. If it selected more than 100 then recall is good.
+Precision: Out of recall how many of ppl actually has virus is precision.
+f1-score is the mean average of recall and precision
+
+confusion matrix is the combination of what is the actual output and what is the expected output for the test data.
+There are four modes:
+True Positive: actual Output and expected are same which is positive.
+True negative:both output  and expected are same which is negative
+False Positive: ACtual output is negative but expected is positive
+False negative: Actual output is positive but expected is negative
+Depending on the context we will consider the recall and precision and modes of confusion matrix. Some times False positive can't harm, but some times it should not be encouraged. Like detecting HIV in patients. It should not show no HIV when the person actually has it.
+
+When you know the input and out put, you use Machine learning. But when you dn't know what the output is there comes Deep Learning:
+Eg: If you have data of the dimensions of dogs in an image like height width color etc, features then you can use Machine learning. But igf you only has image and if you are leaving to the system to calculate and extract the parameters then in that case we use Deep learning. 
+
+We Extract Features in DL
+We utilize features in ML.
+
+We can use DL in Tensorflow and Keras. Keras is a high level API which inturn use Tensorflow itself afor Machine learning and Deep learning programs.
+
+a Neuron: It has input and it passes data. A set of neurons is called a layer. To determine the data we will pass the values to the layers and consider the output.
+Eg: We want to hire a Java expert person based on his programming skills. WE will conduct 3 exams on java c++ and python.
+WE will pass theses results to the program and it will give us the result either to hoire or to reject.
+Here before deciding we will give weightage to each exam of what prioity to take for every subject like consider 40% of total weightage for java and remaining as 30,30%.So these values are called weights.
+
+Here in the real time scenario. We have i/p and o/p the thing is we have to take the weights and we have to update it.
+Steps: First we will give some random weights and check the output then if it doen't fits the output then we will change the weights for each layer and then again check it for each and every row of data.
+So Here we are again going back to change or update the weights. This process is call Back propagation.
+
+After expecting the output. It has the value results with probability, To make this as one expected result we need activation function.
+Activation funtion is like the decision maker out of some outputs. It is like Hr evaluater in the above example.
+
+There are many activation functions present few of them are:
+sigmoid: for classification
+softmax: for multi class
+relu: for image processing (used in conv2D).
+leaky relu:
+
+
+Numpy will perform same as Tensorflow with same speed:
+    But where does it lack? The difference is computational graph.
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
